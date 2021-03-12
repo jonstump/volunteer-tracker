@@ -34,6 +34,12 @@ class Volunteer
   end
 
   def self.find(id)
-
+    volunteer = DB.exec("SELECT * FROM volunteers WHERE id = '#{id}';").first
+    if volunteer
+      name = volunteer.fetch('name')
+      project_id = volunteer.fetch('project_id') 
+      id = volunteer.fetch('id')
+      Volunteer.new({name: name, project_id: project_id, id: id})
+    end
   end
 end
