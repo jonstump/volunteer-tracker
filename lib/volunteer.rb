@@ -32,4 +32,8 @@ class Volunteer
     result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}','#{@project_id}') RETURNING id;")
     @id = result.first.fetch("id").to_i
   end
+
+  def self.find(id)
+
+  end
 end
