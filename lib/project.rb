@@ -17,4 +17,18 @@ class Project
     end
     projects  
   end
+
+  def title
+
+  end
+
+
+
+
+
+
+
+
+
+
 end
