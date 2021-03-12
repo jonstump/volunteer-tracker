@@ -28,3 +28,8 @@ post('/projects') do
   @projects = Project.all
   erb(:projects)
 end
+
+get('/projects/:id') do
+  @project = Project.find(params[:id])
+  erb(:project)
+end
