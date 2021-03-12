@@ -10,3 +10,12 @@
 
 <br>
 <a href="/projects/<%= @project.id %>/edit">Edit Project</a><br>
+
+<h4>Add a new volunteer!</h4>
+<form action="/volunteers" method="post">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input id="name" name="name" class="form-control" type="text" placeholder="Volunteer's Name">
+  </div>
+  <button type="submit" class="btn">Add Volunteer</button>
+</form>
