@@ -40,7 +40,9 @@ class Project
     end
   end
 
+  def update(attr)
 
+  end
 
 
 
