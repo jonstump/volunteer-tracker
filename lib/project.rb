@@ -41,7 +41,10 @@ class Project
   end
 
   def update(attr)
-
+    if (attr.has_key?(:title)) && (attr.fetch(:title) != nil)
+      @title = attr.fetch(:title)
+      DB.exec("UPDATE projects SET title = '#{@title}' WHERE id = #{@id};")
+    end
   end
 
 
