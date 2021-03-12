@@ -47,8 +47,7 @@ class Project
     end
   end
 
-
-
-
-
+  def delete
+    DB.exec("DELTE FROM projects WHERE id = '#{@id}';")
+  end
 end
