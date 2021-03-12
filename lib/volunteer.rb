@@ -20,13 +20,16 @@ class Volunteer
     volunteers = []
     returned_volunteers = DB.exec("SELECT * FROM volunteers;")
     returned_volunteers.each do |volunteer|
-      title = project.fetch('title')
-      id = project.fetch('id').to_i
-      volunteers << Volunteer.new({title: title,  project_id: project_id, id: id})
+      name = volunteer.fetch('name')
+      project_id = volunteer.fetch('project_id')
+      id = volunteer.fetch('id').to_i
+      volunteers << Volunteer.new({name: name,  project_id: project_id, id: id})
     end
     volunteers  
   end
+  
   def save
-
+    result = DB.exec("INSERT INTO volunteers (name, project_id) VALUES ('#{@name}','#{@project_id}') RETURNING id;")
+    @id = result.first.fetch("id").to_i
   end
 end
