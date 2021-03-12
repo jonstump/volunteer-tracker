@@ -39,3 +39,10 @@ get('/projects/:id/edit') do
   @project = Project.find(params[:id])
   erb(:edit_project)
 end
+
+patch('/projects/:id') do
+  @project = Project.find(params[:id])
+  @project.update({:title => params[:title]}) 
+  @projects = Project.all
+  erb(:projects)
+end
