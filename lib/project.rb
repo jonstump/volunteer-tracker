@@ -13,12 +13,18 @@ class Project
     returned_projects.each do |project|
       title = project.fetch('title')
       id = project.fetch('id').to_i
-      projects << Project.new({titl: title,  id: id})
+      projects << Project.new({title: title,  id: id})
     end
     projects  
   end
 
+  def ==(project_to_compare)
+
+  end
+
   def save
+    result = DB.exec("INSERT INTO projects (title) VALUES ('#{@title}') RETURNING id;")
+    @id = result.first.fetch("id").to_i
   end
 
 
