@@ -32,6 +32,7 @@ end
 get('/projects/:id') do
   @project = Project.find(params[:id])
   @volunteers = @project.volunteers
+  binding.pry
   erb(:project)
 end
 
