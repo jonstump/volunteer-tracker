@@ -18,10 +18,8 @@ class Project
     projects  
   end
 
-  def title
-
+  def save
   end
-
 
 
 
