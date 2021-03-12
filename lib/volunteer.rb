@@ -25,6 +25,8 @@ class Volunteer
       volunteers << Volunteer.new({title: title,  project_id: project_id, id: id})
     end
     volunteers  
+  end
+  def save
 
   end
 end
