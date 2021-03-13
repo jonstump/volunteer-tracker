@@ -7,6 +7,7 @@
 ## Description
 This is a website that allows for users to enter information for projects and volunteers related to a non-profit.
 
+![Table Schema](/public/img/volunteer_database_schema.png)
 * * *
 
 ## Technologies used
@@ -17,6 +18,11 @@ This is a website that allows for users to enter information for projects and vo
 * Sinatra
 * Neovim
 * Postgres
+* Bootstrap
+* HTML
+* CSS
+* Bundler
+* git
 * C8H10N4O2
 
 * * *
@@ -36,7 +42,7 @@ Initial Specs:
 
 * Go to ( https://github.com/jonstump/volunteer-tracker ).
 
-*  Navigate to the code button on the github website.
+* Navigate to the code button on the github website.
 
 * Click on the code button to open the menu.
 
@@ -99,7 +105,11 @@ bundle install
 ``` bash
 code .
 ```
+* You will need to have a running version of psql on your computer and tables created for them. To start psql type the following in your terminal.
 
+``bash
+psql
+``
 * To launch a local version of the site in your browser enter the following:
 
 ``` bash
@@ -108,16 +118,18 @@ ruby app.rb
 This will launch a local host via Sinatra. You should be able to navigate to http://localhost:4567/ to see the site locally.
 
 ## To dos:
-* Add views for Projects
-* Add CRUD for Projects
+* Fix bug for adding Volunteers
+* Add Update for Volunteers
+* Pass final integration test
 
 ## Bugs:
-* No known bugs. Please submit any bugs found to the email below
+* Breaks on adding a Volunteer
+  - Possible fix is a route using Projects
 
 * * *
 
 ## License
-> [GPLv3](public/licenses/LICENSE)\
+> [GPLv3](/LICENSE)\
 > Jon Stump &copy; 2021
 
 * * *
