@@ -42,4 +42,12 @@ class Volunteer
       Volunteer.new({name: name, project_id: project_id, id: id})
     end
   end
+
+  def update(attr)
+    if (attr.has_key?(:name)) && (attr.fetch(:name) != nil)
+      @name = attr.fetch(:name)
+      DB.exec("UPDATE volunteers SET name = '#{@name}' WHERE id = '#{@id}';")
+    end
+  end
+
 end
