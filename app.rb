@@ -61,14 +61,13 @@ end
 #====================
 #Volunteers
 #====================
-# get('/volunteers') do
-#   @project = Project.find(params[:id]).to_i
-#   @volunteers = Volunteer.all
-#   erb(:volunteers)
-# end
-
-get('/projects/:id/volunteers/:volunteer_id') do
-  @volunteer = Volunteer.find(params[:volunteer_id].to_i())
+get('/volunteer/:id') do
+  @volunteer = Volunteer.find(params[:id].to_i())
   erb(:volunteer)
 end
+
+# get('/projects/:id/volunteers/:volunteer_id') do
+#   @volunteer = Volunteer.find(params[:volunteer_id].to_i())
+#   erb(:volunteer)
+# end
 
