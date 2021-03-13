@@ -121,10 +121,14 @@ This will launch a local host via Sinatra. You should be able to navigate to htt
 * Fix bug for adding Volunteers
 * Add Update for Volunteers
 * Pass final integration test
+* Add update method for Volunteer class
+* run bash command to add sql file to project
+  - pg_dump volunteer_tracker > database_backup.sql
 
 ## Bugs:
 * Breaks on adding a Volunteer
   - Possible fix is a route using Projects
+  - Other possible fix is to make the project id on the volunteer nil when adding then allowing for them to be updated on the project page.
 
 * * *
 
