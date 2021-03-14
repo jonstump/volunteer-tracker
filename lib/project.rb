@@ -8,14 +8,14 @@ class Project
   end
 
   def self.all
-   projects = []
+  projects = []
     returned_projects = DB.exec("SELECT * FROM projects;")
     returned_projects.each do |project|
       title = project.fetch('title')
       id = project.fetch('id').to_i
       projects << Project.new({title: title,  id: id})
     end
-    projects  
+    projects
   end
 
   def ==(project_to_compare)
@@ -51,7 +51,7 @@ class Project
     DB.exec("DELETE FROM projects WHERE id = '#{@id}';")
     DB.exec("DELETE FROM volunteers WHERE project_id = '#{@id}'")
   end
-  
+
   def volunteers
     volunteers = []
     returned_volunteers = DB.exec("SELECT * FROM volunteers WHERE project_id = '#{@id}';")

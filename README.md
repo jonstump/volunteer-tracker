@@ -1,16 +1,20 @@
 # Ruby Database Project for Epicodus: Volunteer Tracker
-#### By: Jon Stump
+
+#### By Jon Stump
+
 <img align="center" src="https://avatars2.githubusercontent.com/u/59323850?s=460&u=372c7d529b7379408ae54491ab3449b6e2f4d94d&v=4">
 
 * * *
 
 ## Description
+
 This is a website that allows for users to enter information for projects and volunteers related to a non-profit.
 
 ![Table Schema](/public/img/volunteer_database_schema.png)
 * * *
 
 ## Technologies used
+
 * Ruby
 * Rspec
 * Pry
@@ -28,6 +32,7 @@ This is a website that allows for users to enter information for projects and vo
 * * *
 
 ## Specs
+
 Initial Specs:
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
@@ -38,7 +43,7 @@ Initial Specs:
 
 * * *
 
-## Installation :
+## Installation
 
 * Go to ( https://github.com/jonstump/volunteer-tracker ).
 
@@ -55,6 +60,7 @@ Initial Specs:
 ```
 
 - Once you have chosen your desired directory use the command.
+
 ```bash
 git clone https://github.com/jonstump/volunteer-tracker
 ```
@@ -105,6 +111,7 @@ bundle install
 ``` bash
 nvim .
 ```
+
 * You will need to have a running version of psql on your computer and tables created for them. To start psql type the following in your terminal.
 
 ``` bash
@@ -120,21 +127,26 @@ psql -d [destination_database] -f [database_backup.sql]
 ``` bash
 ruby app.rb
 ```
+
 This will launch a local host via Sinatra. You should be able to navigate to http://localhost:4567/ to see the site locally.
 
-## To dos:
+## To dos
+
 * add css to page to make it look a little less plain.
 
-## Bugs:
+## Bugs
+
 * None at this time. If you find a bug please use the contact email below.
 
 * * *
 
 ## License
+
 > [GPLv3](/LICENSE)\
 > Jon Stump &copy; 2021
 
 * * *
 
 ## Contact Information
+
 _Jon Stump: [Email](jmstump@gmail.com)_
