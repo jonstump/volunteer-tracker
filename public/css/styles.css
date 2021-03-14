@@ -1,0 +1,16 @@
+body {
+  background-color: #5D576B;
+  color: #E6EBE0;
+}
+
+.jumbotron {
+  background-color: #9BC1BC;
+}
+
+a:link {
+  color: #ED6A5A;
+}
+
+.btn {
+  background-color: #9BC1BC;
+}
