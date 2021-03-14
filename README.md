@@ -103,13 +103,18 @@ bundle install
 * If you would like to see the code use the command "editor ." (where editor is your code editor. example code for VScode and vim for Vim) to open the project in your code editor.
 
 ``` bash
-code .
+nvim .
 ```
 * You will need to have a running version of psql on your computer and tables created for them. To start psql type the following in your terminal.
 
-``bash
+``` bash
 psql
-``
+```
+
+* At this point you will need to use the database_backup.sql to restore a copy of my database for testing. You can do so with the following command:
+
+psql -d [destination_database] -f [database_backup.sql]
+
 * To launch a local version of the site in your browser enter the following:
 
 ``` bash
@@ -118,17 +123,11 @@ ruby app.rb
 This will launch a local host via Sinatra. You should be able to navigate to http://localhost:4567/ to see the site locally.
 
 ## To dos:
-* Fix bug for adding Volunteers
-* Add Update for Volunteers
-* Pass final integration test
-* Add update method for Volunteer class
 * run bash command to add sql file to project
   - pg_dump volunteer_tracker > database_backup.sql
 
 ## Bugs:
-* Breaks on adding a Volunteer
-  - Possible fix is a route using Projects
-  - Other possible fix is to make the project id on the volunteer nil when adding then allowing for them to be updated on the project page.
+* None at this time. If you find a bug please use the contact email below.
 
 * * *
 
