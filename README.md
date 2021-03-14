@@ -123,8 +123,7 @@ ruby app.rb
 This will launch a local host via Sinatra. You should be able to navigate to http://localhost:4567/ to see the site locally.
 
 ## To dos:
-* run bash command to add sql file to project
-  - pg_dump volunteer_tracker > database_backup.sql
+* add css to page to make it look a little less plain.
 
 ## Bugs:
 * None at this time. If you find a bug please use the contact email below.
