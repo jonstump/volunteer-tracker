@@ -1,7 +1,7 @@
-  <% if @volunteers.any? %>
+  <% if @project.volunteers.any? %>
   <ul>
-    <% @volunteers.each do |volunteer| %>
-      <li><a href="/volunteer/<%= volunteer.id %>"><%= volunteer.name %></a></li>
+    <% @project.volunteers.each do |volunteer| %>
+      <li><a href="<%= @project.id %>/volunteers/<%= volunteer.id %>"><%= volunteer.name %></a></li>
     <% end %>
   </ul>
 <% else %>
